@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Line Break</title>
+    <style>
+        textarea, div {
+            width: 100%;
+            height: 200px;
+            resize: none;
+        }
+        button {
+            width: 100%;
+            margin-top: 10px;
+            height: 40px;
+        }
+    </style>
+    <script>
+        function removeLineBreaks() {
+            const inputText = document.getElementById("inputText");
+            const outputText = document.getElementById("outputText");
+            const stringWithoutLineBreaks = inputText.value.replace(/\r?\n|\r/g, '');
+            outputText.innerHTML = stringWithoutLineBreaks;
+        }
+    </script>
+</head>
+<body>
+    <h1>No Line Break</h1>
+    <h3>Text</h3>
+    <textarea id="inputText"></textarea>
+    <button onclick="removeLineBreaks()">Remove</button>
+    <h3>Result</h3>
+    <div id="outputText"></div>
+</body>
+</html>
