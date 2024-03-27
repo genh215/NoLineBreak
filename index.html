@@ -22,7 +22,7 @@
         function removeLineBreaks() {
             const inputText = document.getElementById("inputText");
             const outputText = document.getElementById("outputText");
-            const stringWithoutLineBreaks = inputText.value.replace(/\r?\n|\r/g, '');
+            const stringWithoutLineBreaks = inputText.value.replace(/\r?\n|\r/g, ' ');
             outputText.innerHTML = stringWithoutLineBreaks;
         }
     </script>
